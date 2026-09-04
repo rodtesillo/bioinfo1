@@ -1,0 +1,35 @@
+---
+title: "Actividad1Bioinfo"
+format: html
+editor: visual
+---
+
+# Metodos de secuenciación
+
+## Sangel
+
+Fue uno de los primeros metodos de secuenciacion, se basa en utilizar una DNA polimerasa y ddNTPs marcados con una sustancia cromofora. La DNA polimerasa actuara normal hasta que tome un ddNTP que terminara prematuramente su transcripcion, de esta forma creando muchas secuencias de diferentes tamaños con un nucleotido conocido. Se usa para confirmar variantes puntuales en un alelo y para observar regiones.
+
+![](images/clipboard-207134267.jpeg)
+
+## Ilumina
+
+El DNA es fragmentado y amplificado por un metodo llamado bridge PCR dentro de una "tarjeta", de esta forma se forman clusters. Posteriormente se sigue una metodologia parecida a la de Sanger, donde se añaden nucleotidos marcados para ser identificados, en cada ciclo se incorporan las bases por cluster y se identifica el color para identificar a la base. Su principal virtud es que es un metodo para secuenciacion masiva, y una precisión bastante alta.
+
+![](images/clipboard-3532729662.jpeg)
+
+## Ion Torrent
+
+Este metodo utiliza el cambio de pH generado en el pocillo de un chip semiconductor, que es capaz de detectar el nucleotido que se incorporo a la cadena y en base a este hara un cambio en el pH, lo que permitira identificarlo y registrarlo mediante un sensor tipo CMOS
+
+## PacBio
+
+El ADN circular se ancla en el fondo de un pocillo nanométrico junto a una polimerasa. Nucleótidos marcados con fluoróforos en el fosfato terminal (no en la base) se incorporan y emiten un pulso de luz que se detecta en tiempo real; el fluoróforo se libera al polimerizarse, sin bloquear la síntesis.
+
+## Oxford Nanopore
+
+Una hebra de ADN o ARN pasa a través de un nanoporo proteico embebido en una membrana con voltaje aplicado. Cada nucleotido que atraviesa el poro altera de forma característica la corriente iónica, esto permite que un algoritmo traduzca esas señales eléctricas en secuencia.
+
+# Actividad 2
+
+![](images/clipboard-1091039213.jpeg)
