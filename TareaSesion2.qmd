@@ -1,0 +1,56 @@
+---
+title: "Sesión2"
+author: "Rodrigo"
+format: html
+editor: visual
+---
+
+# Actividad 1 (Métodos de Secuenciamiento)
+
+Cuantificar en Google Academico la cantidad de documentos cientificos en los que aparecen las plataformas de secuenciamiento.
+
+Sanger sequencing: 41.8%
+
+Illumina sequencing: 44.5%
+
+Ion torrent sequencing platform: 2.43%
+
+PacBio sequencing: 5.27%
+
+Oxford Nanopore sequencing: 5.96%
+
+Total = 1491900
+
+### Sanger sequencing
+
+Mediante este metodos se infiere la secuencia de DNA con el uso de ddNTPs con cromoforos, que al ser usados por la DNA pol como sustratos, terminaran la duplicación. Esto creara cadenas de diferentes tamaños con un marcador que determina el nucleotido final. Mediante electroforesis estas secuencias seran corridas e identificadas por un laser, que indicara el nucleotido que hay en la ultima posicion y de esa forma, inferir la estructura de la secuencia.
+
+### Illumina sequencing
+
+Se compone de cuatro pasos:
+
+- Sample Pre: Se añaden adaptadores en los extremos de los fragmentos de DNA, estos se componen de tres regiones que sirven como punto de anclaje a la Flow Cell, sitios de union de los primers e indices.
+
+- Clusuter Generation: Las cadenas se hibridan en las flow cells formando clusters para generar suficiente señal optica.
+
+- Sequencing: Se añaden nucleotidos terminadores marcados con fluoroforos y cada vez que se una uno de estos se detectara la emisión de luz para identificar de cual se trata
+
+- Data Analysis: Un software coonvierte estas señales en letras y le da forma para obtener una secuencia con puntuación.
+
+### Ion torrent sequencing platform
+
+Se tendran distitos pozos, cada uno con muchas secuencias de fragmentos de DNA, posteriormente estos pozos se llenaran con una solución de un solo nucleotido, y si se detecta que este nuceltido fue agregado a la cadena, entonces habra un cambio en el pH, lo que permitira inferir cual es la cadena repitiendo este proceso.
+
+### PacBio sequencing
+
+Este metodo es el mas completo. Primero se ligan adaptadores a ambos extremos de una cadena con su complemento, formando un bucle, en la región de los adaptadores se unira un primer para hacer sinesis de esa región. En una celda SMRT se tendran millones de micropocillos en donde se unira una de las cadenas mencionadas. Al sintetizarse un nucleotido respecto a la cadena, se liberara una señal debido a los dNTP fluoroforos usados, que permitira inferir la secuencia.
+
+Lo mas destacable de este tipo de secuenciación es que evita regiones repetitivas y reconoce variantes geneticas y metilaciones en el DNA.
+
+### Oxford Nanopore sequencing
+
+Oxforn Nanopore detecta los cambios en la corriente electrica de la membrana cuando pasa el DNA, de modo que puede detectar que base ha pasado e inferir la secuencia. Este es de los metodos de secuenciación mas largos.
+
+# Actividad 2 (Identificación de los valores de calidad en las secuencias)
+
+![](images/clipboard-2410243543.jpeg)

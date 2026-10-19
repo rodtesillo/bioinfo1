@@ -1,0 +1,223 @@
+---
+title: "Análisis del Bioproject PRJNA268110"
+author: "Rodrigo López"
+format: html
+editor: visual
+---
+
+# Análisis de PRJNA268110
+
+## Introducción
+
+Se ha demostrado que la inactivación de replication checkpoint por medio de una mutación en mec1 induce al rompimiento de los cromosomas en los replication forks despues de ser expuestos a hydroxyurea.
+
+### Contexto biológico
+
+Se estudiara al organismo *Saccharomyces cerevisiae*, organismo usado en la fermentación de cerveza.
+
+Se analizaran dos cepas:
+
+- WFA73 (*mec1*)
+
+- WFA72 (*wildtype*)
+
+### Objetivo del estudio
+
+El objetivo general del estudio es determinar si en todas las horquilla de replicación con huecos de ssDNA existe la misma probabilidad de producir roturas de doble cadena cuando el organismo se recupera de una exposición a HU.
+
+La pregunta que se intentaba resolver era ¿Por qué diferentes inhibidores producian diferentes efectos en la ruptura de los cromosomas y como se relacionaban los conflictos en la transcripción y replicación con la fragilidad de la cadena en repsuesta al estres.
+
+### Datos y metodología
+
+1.  Para acceder a los datos, primero me meti a NCBI, donde busque el nombre del Bioproject (PRJNA268110)
+2.  Ya ahi me metí a SRA, en la tabla de Información Relacionada
+3.  En SRA lo envie con send to solo a "Run Selector"
+4.  En la pagina a la que me redirigio busque Select y descargue la tabla en Metadata con la infromación de los Projects y los ID
+5.  Ya con los datos accedi al Ken, y a mi carpeta de trabajo en `cd /mnt/data/bioinfo1/rltesillo/`
+6.  Con nano edite el slurm para poner los ID con los que quiero trabajar
+7.  Corri el slurm para obtener los datos
+
+Plataforma de secuenciación: 1 LLUMINA (Illumina MiSeq)
+
+Tecnología utilizada (versión): Mi-seq
+
+Cada Run contiene entre 2.1 y 6.1 millones de pares de lecturas de aproximadamente 74 pb.
+
+Las datos son paired-end
+
+Formato de los archivos descargados: FastQ
+
+### Fuentes de datos
+
+Base de datos para bioproject:
+
+<https://ncbi.nlm.nih.gov/bioproject/?term=PRJNA268110>
+
+Base de datos para descargar genoma de referencia
+
+<https://www.ncbi.nlm.nih.gov/search/all/?term=Saccharomyces+cerevisiae+>
+
+Identificador de BioProject: PRJNA268110
+
+Los datos fueron obtenidos por medio de NCBI.
+
+Publicación asociada: [Hoffman EA *et al.,*](https://ncbi.nlm.nih.gov/pubmed/25609572) "Break-seq reveals hydroxyurea-induced chromosome fragility as a result of unscheduled conflict between DNA replication and transcription.", *Genome Res*, 2015 Mar;25(3):402-12
+
+La institución responsable del estudio es la SUNY Upstate Medical University con un equipo liderado por Wenyi Feng.
+
+La fecha de registro de los datos crudos proviene del 20 de Noviembre del 2014. Y el articulo se publico el 25 de Marzo del 2015
+
+### BioProject/BioSample/SRA
+
+Explicar la diferencia entre BioProject, BioSample, SRA Experiment y\
+SRA Run.
+
+El Bioproject es donde se guardaran todos los datos relacionados a un estudio, iniciativa cientifica o hipótesis de investigación. Dentro se encontraran los datos generados bajo un mismo objetivo.
+
+El Biosample se refiere al organismo con el cual se trabajara y de donde se exrajo la información genomica.
+
+SRA Experiment se refiere al protocolo que se uso para secuenciar los datos
+
+SRA Run: Es el resultado de secuenciar un SRA Experiment.
+
+| BioSample    | SRA Experiment | SRA Run    | Tipo de secuenciación | Paired/Single |
+|---------------|---------------|---------------|---------------|---------------|
+| SAMN03203061 | SRX764815      | SRR1658454 | RNA-Seq               | PAIRED        |
+| SAMN03203063 | SRX764816      | SRR1658455 | RNA-Seq               | PAIRED        |
+| SAMN03203066 | SRX764817      | SRR1658456 | RNA-Seq               | PAIRED        |
+| SAMN03203053 | SRX764818      | SRR1658457 | RNA-Seq               | PAIRED        |
+| SAMN03203062 | SRX764819      | SRR1658458 | RNA-Seq               | PAIRED        |
+| SAMN03203059 | SRX764820      | SRR1658459 | RNA-Seq               | PAIRED        |
+| SAMN03203067 | SRX764821      | SRR1658460 | RNA-Seq               | PAIRED        |
+| SAMN03203068 | SRX764822      | SRR1658461 | RNA-Seq               | PAIRED        |
+
+### Datos descargados
+
+\#\
+Número de archivos descargados\
+`$ ls *.fastq | wc -l`\
+16
+
+\
+\#\
+Tamaño de cada archivo (Mb o Gb)\
+`$ du -sh *.fastq`
+
+SRR1658454_1.fastq - 449M
+
+SRR1658455_1.fastq - 522M
+
+SRR1658456_1.fastq - 960M
+
+SRR1658457_1.fastq - 1.3G
+
+SRR1658458_1.fastq - 870M
+
+SRR1658459_1.fastq - 715M
+
+SRR1658460_1.fastq - 1.1G
+
+SRR1658461_1.fastq
+
+\#\
+Número de secuencias de cada FastQ\
+`$ grep -c @SRR *.fastq`
+
+SRR1658454_1.fastq:3438388
+
+SRR1658455_1.fastq:2090805
+
+SRR1658456_1.fastq:2428934
+
+SRR1658457_1.fastq:4452257
+
+SRR1658458_1.fastq:6080904
+
+SRR1658459_1.fastq:4037197
+
+SRR1658460_1.fastq:3317701
+
+SRR1658461_1.fastq:4961938
+
+\#\
+Longitud promedio de lecturas\
+`$ head -n1 *.fastq`\
+length=75
+
+\#\
+Mostrar una parte de las lecturas crudas\
+`$ head -n4 SRR1658454_1.fastq`\
+1. @SRR1658454.1 1 length=75\
+2. CGGGAATTCATCATCAGTCCTTCCCACTAAGTAAACAAGGTGTCTTCATCTCTCAAATACTCACCAATATCTGCT\
+3. +SRR1658454.1 1 length=75\
+4. 668--+CFF9FGGGGGGGGGGGGGGGGGGGGGFFDFFGFFG8CFFFF9FFFGFGFAAFFFDF,CFC8F,CCC,
+
+La primera linea es el identificador.
+
+La segunda linea es la secuencia.
+
+La tercera linea sirve para separar la secuencia y su nivel de calidad.
+
+La cuarta linea nos señala la calidad, es decir, que tan seguro es que se trate de la letra correcta.
+
+### Herramientas utilizadas
+
+Para entrar a la sesión interactiva:
+
+`srun --export=ALL --x11 --pty bash`
+
+Para cargar el modulo de fastq:
+
+`module load fastqc/0.11.3`
+
+### Resultados
+
+Reportar:Número total de reads:
+
+`grep -c "^>" GCF_000146045.2_R64_genomic.fna | wc -l`
+
+17
+
+Longitud de las lecturas:
+
+`GCF_000146045.2_R64_genomic.fna | wc -m`
+
+12309078
+
+Visualización básica de los resultados:
+
+`grep "^>" GCF_000146045.2_R64_genomic.fna`
+
+**\>**NC_001133.9 Saccharomyces cerevisiae S288C chromosome I, complete sequence
+
+**\>**NC_001134.8 Saccharomyces cerevisiae S288C chromosome II, complete sequence
+
+**\>**NC_001135.5 Saccharomyces cerevisiae S288C chromosome III, complete sequence
+
+**\>**NC_001136.10 Saccharomyces cerevisiae S288C chromosome IV, complete sequence
+
+**\>**NC_001137.3 Saccharomyces cerevisiae S288C chromosome V, complete sequence
+
+**\>**NC_001138.5 Saccharomyces cerevisiae S288C chromosome VI, complete sequence
+
+**\>**NC_001139.9 Saccharomyces cerevisiae S288C chromosome VII, complete sequence
+
+**\>**NC_001140.6 Saccharomyces cerevisiae S288C chromosome VIII, complete sequence
+
+**\>**NC_001141.2 Saccharomyces cerevisiae S288C chromosome IX, complete sequence
+
+**\>**NC_001142.9 Saccharomyces cerevisiae S288C chromosome X, complete sequence
+
+**\>**NC_001143.9 Saccharomyces cerevisiae S288C chromosome XI, complete sequence
+
+**\>**NC_001144.5 Saccharomyces cerevisiae S288C chromosome XII, complete sequence
+
+**\>**NC_001145.3 Saccharomyces cerevisiae S288C chromosome XIII, complete sequence
+
+**\>**NC_001146.8 Saccharomyces cerevisiae S288C chromosome XIV, complete sequence
+
+**\>**NC_001147.6 Saccharomyces cerevisiae S288C chromosome XV, complete sequence
+
+**\>**NC_001148.4 Saccharomyces cerevisiae S288C chromosome XVI, complete sequence
+
+**\>**NC_001224.1 Saccharomyces cerevisiae S288c mitochondrion, complete genome
