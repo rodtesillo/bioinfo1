@@ -4,10 +4,18 @@ my_script.slurm
 
 ncbi_dataset
 
-ncbi_dataset.zip
-
 rltesillo_slurm.o2543
+
+rltesillo_slurm.o2739
 
 sesion08
 
 sesion09
+
+*.html
+
+*.zip
+
+*.fastq
+
+SRR*
