@@ -1,12 +1,23 @@
-md5sum.txt
+# Datos de secuencias: nunca se versionan
+*.fasta
+*.fa
+*.fastq
+*.fq
+*.bam
+*.sam
+*.vcf
+*.gz
 
-my_script.slurm
+# Resultados regenerables
+resultados/
+*.log
 
-ncbi_dataset
+# Basura del sistema y del editor
+.DS_Store
+*~
+.Rhistory
 
-rltesillo_slurm.o2543
-
-rltesillo_slurm.o2739
+# Extras
 
 sesion08
 
@@ -19,3 +30,4 @@ sesion09
 *.fastq
 
 SRR*
+
