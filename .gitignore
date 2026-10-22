@@ -17,17 +17,15 @@ resultados/
 *~
 .Rhistory
 
-# Extras
+# Archivos de sesion 8
+sesion08/hits.tsv
+sesion08/mejores.tsv
+sesion08/referencias_lgr5.faa
+sesion08/referencias_lgr5_vs_proteoma_dlaeve.tsv
+sesion08/candidatos_lgr.faa
+sesion08/familia_lgr.faa
+sesion08/familia_lgr.aln.faa
+sesion08/vuelta.tsv
 
-sesion08
-
-sesion09
-
-*.html
-
-*.zip
-
-*.fastq
-
-SRR*
-
+# Toda la sesion 3
+sesion03
