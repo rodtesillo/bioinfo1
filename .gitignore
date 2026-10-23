@@ -29,3 +29,9 @@ sesion08/vuelta.tsv
 
 # Toda la sesion 3
 sesion03
+
+# Toda la sesion 9
+sesion09/*
+!sesion09/lgr_tabla.tsv
+!sesion09/rspo_tabla.tsv
+!sesion09/README.md
